@@ -32,3 +32,81 @@ try {
     echo $th;
 }
 
+
+/*
+
+
+--
+-- Base de datos: `aprendicesficha3070302adso`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `aprendices`
+--
+
+CREATE TABLE `aprendices` (
+  `id_aprendiz` int(100) NOT NULL,
+  `nombre_aprendiz` text NOT NULL,
+  `password_aprendiz` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `aprendices`
+--
+
+INSERT INTO `aprendices` (`id_aprendiz`, `nombre_aprendiz`, `password_aprendiz`) VALUES
+(1, 'Sergio ', 'sergio1234'),
+(2, 'Esteban', 'esteban1234'),
+(3, 'pepito', 'pepito1234'),
+(4, 'juanito', 'juanito1234');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `fichas`
+--
+
+CREATE TABLE `fichas` (
+  `id_ficha` int(11) NOT NULL,
+  `numero_ficha` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `aprendices`
+--
+ALTER TABLE `aprendices`
+  ADD PRIMARY KEY (`id_aprendiz`);
+
+--
+-- Indices de la tabla `fichas`
+--
+ALTER TABLE `fichas`
+  ADD PRIMARY KEY (`id_ficha`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `aprendices`
+--
+ALTER TABLE `aprendices`
+  MODIFY `id_aprendiz` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `fichas`
+--
+ALTER TABLE `fichas`
+  MODIFY `id_ficha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
