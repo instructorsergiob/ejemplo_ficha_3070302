@@ -58,6 +58,7 @@ if(isset($_POST['Enviar'])){
         session_start();
         $_SESSION['aprendiz'] = $nombre;
         header('Location:dashBoard_Principal.php');
+        
     }else{
         echo '<div class="alert alert-danger" role="alert">Usuario o contraseña incorrectos!</div>';
     }

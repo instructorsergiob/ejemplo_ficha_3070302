@@ -16,11 +16,11 @@ if (!isset($_SESSION["aprendiz"]) && basename($_SERVER["PHP_SELF"]) != "index.ph
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="./estilos.css">
     <title>Dashboard</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Hola, <?php echo $_SESSION["aprendiz"];?></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +37,9 @@ if (!isset($_SESSION["aprendiz"]) && basename($_SERVER["PHP_SELF"]) != "index.ph
           <li class="nav-item">
             <a class="nav-link" href="./estadisticas.php"><i class="bi bi-gear"></i> Estadisticas</a>
           </li>
+          <li class="nav-item">
+                        <a class="nav-link" href="./registraraprendiz.php"><i class="bi bi-gear"></i> Registrar Aprendiz</a>
+                    </li>
           <li class="nav-item">
             <a class="nav-link" href="./cerrarSesion.php"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
           </li>
